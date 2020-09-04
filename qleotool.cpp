@@ -25,13 +25,14 @@ void QLeoTool::initUi()
 
 void QLeoTool::initConnect()
 {
-    connect(m_topWidget, SIGNAL(closeWidget()), this, SLOT(closeWidget()));
-    connect(m_topWidget, SIGNAL(showNavigation()), this, SLOT(showNavigation()));
+    connect(m_topWidget, &MainTopWidget::closeWidget, this, &QLeoTool::closeWidget);
+    connect(m_topWidget, &MainTopWidget::showNavigation, this, &QLeoTool::showNavigation);
+
+    connect(m_centerWidget, &MainCenterWidget::listViewPress, this, &QLeoTool::navigationListViewClick);
 }
 
 void QLeoTool::closeWidget()
 {
-    qDebug() << "-----------------111111111111111---------------";
     qApp->quit();
 }
 
@@ -45,5 +46,10 @@ void QLeoTool::showNavigation()
     {
         m_centerWidget->m_navigationListView->hide();
     }
+}
+
+void QLeoTool::navigationListViewClick(QModelIndex index)
+{
+    Q_UNUSED(index);
 }
 

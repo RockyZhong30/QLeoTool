@@ -17,35 +17,6 @@ MainCenterWidget::MainCenterWidget(QWidget *parent) :
 void MainCenterWidget::initParameter()
 {
     m_centerPix = QPixmap(":/image/center_bg");
-
-    m_listItem.append("主界面||0|T-Scale");
-
-    m_listItem.append("串口测试||0|");
-    m_listItem.append("串口读写|串口测试||");
-    m_listItem.append("打印测试|串口测试||");
-
-    m_listItem.append("文件读写||0|");
-    m_listItem.append("U盘测试|文件读写||");
-    m_listItem.append("磁盘读写|文件读写||");
-
-    m_listItem.append("网络测试||0|");
-    m_listItem.append("Wifi测试|网络测试|0|");
-    m_listItem.append("Eth0测试|网络测试|0|");
-
-    m_listItem.append("硬件测试||0|");
-    m_listItem.append("LCD测试|硬件测试|0|");
-    m_listItem.append("触摸屏测试|硬件测试|0|");
-    m_listItem.append("蜂鸣器测试|硬件测试|0|");
-
-    m_listItem.append("系统测试||0|");
-    m_listItem.append("称重测试|系统测试|0|");
-    m_listItem.append("RTC测试|系统测试|0|");
-    m_listItem.append("钱箱测试|系统测试|0|");
-
-    m_listItem.append("系统设置||1|");
-    m_listItem.append("帮助文档||1|");
-
-
 }
 
 void MainCenterWidget::initUI()
@@ -60,7 +31,7 @@ void MainCenterWidget::initUI()
     m_centerWidget->setTabsClosable(true);
 
     m_navigationListView = new NavListView(this);
-    m_navigationListView->setData(m_listItem);
+    m_navigationListView->readData(":/xml/toolXml");
     m_navigationListView->setIcoColorBg(false);
 //    m_navigationListView->setColorLine(QColor(32, 53, 74));
 //    m_navigationListView->setColorBg(QColor(52, 73, 94), QColor(24, 189, 155), QColor(24, 189, 155, 150));
@@ -85,7 +56,6 @@ void MainCenterWidget::initAnimation()
 
 void MainCenterWidget::initConnect()
 {
-//    connect(m_navigationListView, SIGNAL(pressed(QModelIndex)), this, SIGNAL(listViewPress(QModelIndex)));
     connect(m_navigationListView, SIGNAL(pressed(QModelIndex)), this, SIGNAL(listViewPress(QModelIndex)));
     connect(m_centerWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(tabCloseRequested(int)));
     connect(m_centerWidget, SIGNAL(currentChanged(int)), this, SLOT(tabCurrentChanged(int)));

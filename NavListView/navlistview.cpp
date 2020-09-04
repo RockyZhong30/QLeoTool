@@ -164,7 +164,8 @@ void NavDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, c
 	QString recordInfo = node->info;
 
 	//如果不需要显示提示信息或者提示信息为空则返回
-	if (!nav->getInfoVisible() || recordInfo.isEmpty()) {
+    if(!nav->getInfoVisible() || recordInfo.isEmpty())
+    {
 		return;
 	}
 
@@ -175,9 +176,9 @@ void NavDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, c
 
 	//绘制提示信息背景
 	QRect decoration = option.rect;
-	decoration.setHeight(15);
+    decoration.setHeight(15);
 	decoration.moveCenter(option.rect.center());
-	decoration.setLeft(option.rect.right() - 45);
+    decoration.setLeft(option.rect.right() - 75);
 	decoration.setRight(option.rect.right() - 5);
 
 	painter->setPen(decorationPen);
@@ -186,13 +187,15 @@ void NavDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, c
 	painter->fillPath(path, decorationBrush);
 
 	//如果是数字则将超过999的数字显示成 999+
-	if (recordInfo.toInt() > 999) {
-		recordInfo = "999+";
-	}
+//    if(recordInfo.toInt() > 999)
+//    {
+//		recordInfo = "999+";
+//	}
 
-	//如果显示的提示信息长度超过4则将多余显示成省略号..
-	if (recordInfo.length() > 4) {
-		recordInfo = recordInfo.mid(0, 4) + "..";
+    //如果显示的提示信息长度超过12则将多余显示成省略号..
+    if(recordInfo.length() > 10)
+    {
+        recordInfo = recordInfo.mid(0, 10) + "..";
 	}
 
 	painter->drawText(decoration, Qt::AlignCenter, recordInfo);
@@ -237,7 +240,8 @@ void NavModel::readData(QString path)
 	QDomNode root = doc.documentElement().firstChildElement("layout");
 	QDomNodeList children = root.childNodes();
 
-	for (int i = 0; i != children.count(); ++i) {
+    for(int i = 0; i != children.count(); ++i)
+    {
 		QDomElement nodeInfo = children.at(i).toElement();
 		TreeNode *node = new TreeNode;
 		node->label = nodeInfo.attribute("label");
@@ -247,7 +251,8 @@ void NavModel::readData(QString path)
 
 		QDomNodeList secondLevel = nodeInfo.childNodes();
 
-		for (int j = 0; j != secondLevel.count(); ++j) {
+        for(int j = 0; j != secondLevel.count(); ++j)
+        {
 			QDomElement secNodeInfo = secondLevel.at(j).toElement();
 			TreeNode *secNode = new TreeNode;
 			secNode->label = secNodeInfo.attribute("label");

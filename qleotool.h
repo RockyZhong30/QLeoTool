@@ -1,6 +1,8 @@
 #ifndef QLEOTOOL_H
 #define QLEOTOOL_H
 
+#include <QModelIndex>
+
 #include "common/shadowwidget.h"
 #include "common.h"
 
@@ -18,6 +20,8 @@ public:
 private slots:
     void closeWidget();
     void showNavigation();
+
+    void navigationListViewClick(QModelIndex index);
 
 private:
     void initUi();

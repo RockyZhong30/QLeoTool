@@ -50,12 +50,14 @@ public:
 	~NavModel();
 
 public:
-	struct TreeNode {
+    struct TreeNode
+    {
 		QString label;
 		int level;
 		bool collapse;
 		bool theLast;
         QString info;
+        int num;
 		std::list<TreeNode *> children;
 	};
 

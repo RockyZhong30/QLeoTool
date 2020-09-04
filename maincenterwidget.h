@@ -43,7 +43,6 @@ private:
 private:
     QList<stuTab>       m_lstTabWidgetIndex;
     QPixmap             m_centerPix;
-    QStringList         m_listItem;
 
 };
 

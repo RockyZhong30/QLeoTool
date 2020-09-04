@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<layout>
+                <Node label="主界面" info="Leo Tool"></Node>
+                <Node label="串口测试" collapse="0">
+		</Node>
+                <Node label="文件读写" collapse="0">
+		</Node>
+                <Node label="网络测试" collapse="0">
+		</Node>
+		<Node label="硬件测试" collapse="0">
+						<Node label="CPU测试" num="0"></Node>
+                        <Node label="LCD测试" num="1"></Node>
+                        <Node label="触摸屏测试"num="2"></Node>
+						<Node label="3D测试"num="3"></Node>
+						<Node label="打印"num="4"></Node>
+		</Node>
+		<Node label="系统测试" collapse="0">
+		</Node>
+                <Node label="帮助文档">
+		</Node>
+	</layout>
+</root>

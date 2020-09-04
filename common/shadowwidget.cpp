@@ -7,7 +7,7 @@ ShadowWidget::ShadowWidget(QWidget *parent) :
     QDialog(parent),
     m_mousePress(false)
 {
-//    setWindowFlags(Qt::FramelessWindowHint | Qt::Dialog);
+    setWindowFlags(Qt::FramelessWindowHint | Qt::Dialog);
     this->setObjectName("basewidget");
 //    setAttribute(Qt::WA_TranslucentBackground); //设置背景透明
 }
