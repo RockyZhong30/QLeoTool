@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/image">
+        <file alias="top_bg">image/top_bg.png</file>
+        <file alias="top_right">image/top_right.png</file>
+        <file alias="home_cli">image/home_cli.png</file>
+        <file alias="home_hov">image/home_hov.png</file>
+        <file alias="home_nor">image/home_nor.png</file>
+        <file alias="nav_cli">image/nav_cli.png</file>
+        <file alias="nav_hov">image/nav_hov.png</file>
+        <file alias="nav_nor">image/nav_nor.png</file>
+        <file alias="quit_cli">image/quit_cli.png</file>
+        <file alias="quit_hov">image/quit_hov.png</file>
+        <file alias="quit_nor">image/quit_nor.png</file>
+        <file>image/top_area.png</file>
+        <file alias="application">image/application.png</file>
+        <file alias="help_cli">image/help_cli.png</file>
+        <file alias="help_hov">image/help_hov.png</file>
+        <file alias="help_nor">image/help_nor.png</file>
+    </qresource>
+    <qresource prefix="/qss">
+        <file alias="default">qss/default.qss</file>
+    </qresource>
+</RCC>

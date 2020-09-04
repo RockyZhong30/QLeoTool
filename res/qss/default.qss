@@ -1,0 +1,47 @@
+QTabBar::tab{
+	min-height: 30px;
+}
+
+
+QPushButton#homeButton{
+	border-image:url(:/image/home_nor);
+}
+QPushButton#homeButton:hover{
+	border-image:url(:/image/home_hov);
+}
+QPushButton#homeButton:pressed{
+	border-image:url(:/image/home_cli);
+}
+
+QPushButton#helpButton{
+	border-image:url(:/image/help_nor);
+}
+QPushButton#helpButton:hover{
+	border-image:url(:/image/help_hov);
+}
+QPushButton#helpButton:pressed{
+	border-image:url(:/image/help_cli);
+}
+
+QPushButton#quitButton{
+	border-image:url(:/image/quit_nor);
+}
+QPushButton#quitButton:hover{
+	border-image:url(:/image/quit_hov);
+}
+QPushButton#quitButton:pressed{
+	border-image:url(:/image/quit_cli);
+}
+
+
+
+QPushButton#navigationButton{
+	border-image:url(:/image/nav_hov);
+}
+
+
+QLabel#navigationLabel{
+	font:22px;
+	color:#FFFFFF
+}
+
