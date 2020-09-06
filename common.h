@@ -5,5 +5,4 @@
 #define SCREEN_HEIGHT       600
 #define SCREEN_TOP_HEIGHT   100
 
-
 #endif // COMMON_H

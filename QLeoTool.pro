@@ -22,7 +22,9 @@ SOURCES += \
     main.cpp \
     maincenterwidget.cpp \
     maintopwidget.cpp \
-    qleotool.cpp
+    qleotool.cpp \
+    battery/battery.cpp \
+    battery/frmbattery.cpp
 
 HEADERS += \
     NavListView/navlistview.h \
@@ -31,7 +33,9 @@ HEADERS += \
     common/shadowwidget.h \
     maincenterwidget.h \
     maintopwidget.h \
-    qleotool.h
+    qleotool.h \
+    battery/battery.h \
+    battery/frmbattery.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -40,3 +44,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     res/resource.qrc
+
+SUBDIRS += \
+    battery/battery.pro
+
+FORMS += \
+    battery/frmbattery.ui

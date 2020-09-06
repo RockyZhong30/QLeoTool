@@ -4,6 +4,8 @@
 #include "maintopwidget.h"
 #include "maincenterwidget.h"
 
+#include "battery/frmbattery.h"
+
 QLeoTool::QLeoTool(QWidget *parent)
     : ShadowWidget(parent)
 {
@@ -50,6 +52,22 @@ void QLeoTool::showNavigation()
 
 void QLeoTool::navigationListViewClick(QModelIndex index)
 {
-    Q_UNUSED(index);
+    NavModel::TreeNode *node = (NavModel::TreeNode *)index.data(Qt::UserRole).toULongLong();
+//    qDebug() << "index:" << node->num;
+    if((LeoTool_Init == node->num) || (m_centerWidget->isFunWidgetExist(node->num)))
+    {
+        return;
+    }
+    switch(node->num)
+    {
+    case LeoTool_Battary:
+    {
+        frmBattery *wgt = new frmBattery(this);
+        m_centerWidget->addFunWidget("电池电量控件", LeoTool_Battary, wgt);
+        break;
+    }
+    default:
+        break;
+    }
 }
 

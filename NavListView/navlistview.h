@@ -87,7 +87,11 @@ class NavListView : public QListView
 {
 	Q_OBJECT
 public:
-    enum IcoStyle {IcoStyle_Cross = 0, IcoStyle_Triangle = 1};
+    enum IcoStyle
+    {
+        IcoStyle_Cross = 0,
+        IcoStyle_Triangle = 1
+    };
 	NavListView(QWidget *parent);
 	~NavListView();
 

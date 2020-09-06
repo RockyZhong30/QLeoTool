@@ -14,6 +14,13 @@ class QLeoTool : public ShadowWidget
     Q_OBJECT
 
 public:
+    enum LeoToolNum
+    {
+        LeoTool_Init = -1,
+        LeoTool_Battary,
+        LeoTool_end
+    };
+
     QLeoTool(QWidget *parent = nullptr);
     ~QLeoTool();
 

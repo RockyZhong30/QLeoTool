@@ -20,6 +20,7 @@ public:
     explicit            MainCenterWidget(QWidget *parent = 0);
 
     void                addFunWidget(QString name, int number, QWidget *wgt);
+    bool                isFunWidgetExist(int number);
 public:
     QTabWidget          *m_centerWidget;
     NavListView         *m_navigationListView;

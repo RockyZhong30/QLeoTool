@@ -34,11 +34,16 @@ void NavDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, c
 	//绘制背景
 	QColor colorBg;
 
-	if (option.state & QStyle::State_Selected) {
+    if(option.state & QStyle::State_Selected)
+    {
 		colorBg = nav->getColorBgSelected();
-	} else if (option.state & QStyle::State_MouseOver) {
+    }
+    else if(option.state & QStyle::State_MouseOver)
+    {
 		colorBg = nav->getColorBgHover();
-	} else {
+    }
+    else
+    {
 		colorBg = nav->getColorBgNormal();
 	}
 
@@ -248,6 +253,7 @@ void NavModel::readData(QString path)
 		node->collapse = nodeInfo.attribute("collapse").toInt();
 		node->info = nodeInfo.attribute("info");
 		node->level = 1;
+        node->num = -1;
 
 		QDomNodeList secondLevel = nodeInfo.childNodes();
 
@@ -260,6 +266,7 @@ void NavModel::readData(QString path)
 			secNode->collapse = false;
 			secNode->level = 2;
 			secNode->theLast = (j == secondLevel.count() - 1 && i != children.count() - 1);
+            secNode->num = secNodeInfo.attribute("num").toInt();
 			node->children.push_back(secNode);
 		}
 
@@ -352,9 +359,12 @@ QVariant NavModel::data(const QModelIndex &index, int role) const
 		return QVariant();
 	}
 
-	if (role == Qt::DisplayRole) {
+    if(role == Qt::DisplayRole)
+    {
 		return listNode[index.row()].label;
-	} else if (role == Qt::UserRole) {
+    }
+    else if(role == Qt::UserRole)
+    {
         return (unsigned long long)(listNode[index.row()].treeNode);
 	}
 
@@ -394,17 +404,21 @@ void NavModel::collapse(const QModelIndex &index)
 {
 	TreeNode *node = listNode[index.row()].treeNode;
 
-	if (node->children.size() == 0) {
+    if(node->children.size() == 0)
+    {
 		return;
 	}
 
 	node->collapse = !node->collapse;
 	refreshList();
 
-	if (!node->collapse) {
+    if(!node->collapse)
+    {
 		beginInsertRows(QModelIndex(), index.row() + 1, index.row() + node->children.size());
 		endInsertRows();
-	} else {
+    }
+    else
+    {
 		beginRemoveRows(QModelIndex(), index.row() + 1, index.row() + node->children.size());
 		endRemoveRows();
 	}

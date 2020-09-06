@@ -83,6 +83,19 @@ void MainCenterWidget::addFunWidget(QString name, int number, QWidget *wgt)
     m_lstTabWidgetIndex.append(tab);
 }
 
+bool MainCenterWidget::isFunWidgetExist(int number)
+{
+    for(int i = 0; i < m_lstTabWidgetIndex.count(); i++)
+    {
+        if(number == m_lstTabWidgetIndex.at(i).number)
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 void MainCenterWidget::tabCloseRequested(int index)
 {
     for(int i = 0; i < m_lstTabWidgetIndex.count(); i++)
