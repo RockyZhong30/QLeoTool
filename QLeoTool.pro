@@ -31,7 +31,11 @@ SOURCES += \
     comtool/qextserialport/qextserialport.cpp \
     comtool/form/frmcomtool.cpp \
     comtool/api/app.cpp \
-    comtool/api/quiwidget.cpp
+    comtool/api/quiwidget.cpp \
+    devicesizetable/devicesizetable.cpp \
+    devicesizetable/frmdevicesizetable.cpp \
+    flatui/flatui.cpp \
+    flatui/frmflatui.cpp
 
 HEADERS += \
     NavListView/navlistview.h \
@@ -52,7 +56,11 @@ HEADERS += \
     comtool/qextserialport/qextserialport_p.h \
     comtool/form/frmcomtool.h \
     comtool/api/app.h \
-    comtool/api/quiwidget.h
+    comtool/api/quiwidget.h \
+    devicesizetable/devicesizetable.h \
+    devicesizetable/frmdevicesizetable.h \
+    flatui/flatui.h \
+    flatui/frmflatui.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -70,9 +78,9 @@ SUBDIRS += \
 FORMS += \
     battery/frmbattery.ui \
     buttondefence/frmbuttondefence.ui \
-    comtool/form/frmcomtool.ui
+    comtool/form/frmcomtool.ui \
+    devicesizetable/frmdevicesizetable.ui \
+    flatui/frmflatui.ui
 
 win32:SOURCES += $$PWD/comtool/qextserialport/qextserialport_win.cpp
 unix:SOURCES += $$PWD/comtool/qextserialport/qextserialport_unix.cpp
-
-RC_FILE     = logo.rc

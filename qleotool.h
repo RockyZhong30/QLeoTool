@@ -20,6 +20,8 @@ public:
         LeoTool_homePage,
         LeoTool_Battary,
         LeoTool_ButtonDefence,
+        LeoTool_DeviceSizetable,
+        LeoTool_FlatUi,
         LeoTool_ComTool,
         LeoTool_end
     };

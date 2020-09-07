@@ -8,6 +8,8 @@
 #include "battery/frmbattery.h"
 #include "buttondefence/frmbuttondefence.h"
 #include "comtool/form/frmcomtool.h"
+#include "devicesizetable/frmdevicesizetable.h"
+#include "flatui/frmflatui.h"
 
 QLeoTool::QLeoTool(QWidget *parent)
     : ShadowWidget(parent)
@@ -103,6 +105,18 @@ void QLeoTool::navigationListViewClick(QModelIndex index)
         {
             wgt = new frmComTool(this);
             name = "串口调试助手";
+            break;
+        }
+        case LeoTool_DeviceSizetable:
+        {
+            wgt = new frmDeviceSizeTable(this);
+            name = "硬盘容量控件";
+            break;
+        }
+        case LeoTool_FlatUi:
+        {
+            wgt = new frmFlatUI(this);
+            name = "FlatUI控件集合";
             break;
         }
         default:
