@@ -16,8 +16,11 @@ class QLeoTool : public ShadowWidget
 public:
     enum LeoToolNum
     {
-        LeoTool_Init = -1,
+        LeoTool_Init = 0,
+        LeoTool_homePage,
         LeoTool_Battary,
+        LeoTool_ButtonDefence,
+        LeoTool_ComTool,
         LeoTool_end
     };
 
@@ -33,6 +36,7 @@ private slots:
 private:
     void initUi();
     void initConnect();
+    void initParameter();
 
 private:
     MainTopWidget       *m_topWidget;

@@ -1,4 +1,4 @@
-QT       += core gui xml
+QT       += core gui xml network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -24,7 +24,14 @@ SOURCES += \
     maintopwidget.cpp \
     qleotool.cpp \
     battery/battery.cpp \
-    battery/frmbattery.cpp
+    battery/frmbattery.cpp \
+    buttondefence/buttondefence.cpp \
+    buttondefence/frmbuttondefence.cpp \
+    leohomepage.cpp \
+    comtool/qextserialport/qextserialport.cpp \
+    comtool/form/frmcomtool.cpp \
+    comtool/api/app.cpp \
+    comtool/api/quiwidget.cpp
 
 HEADERS += \
     NavListView/navlistview.h \
@@ -35,7 +42,17 @@ HEADERS += \
     maintopwidget.h \
     qleotool.h \
     battery/battery.h \
-    battery/frmbattery.h
+    battery/frmbattery.h \
+    buttondefence/buttondefence.h \
+    buttondefence/frmbuttondefence.h \
+    leohomepage.h \
+    comtool/head.h \
+    comtool/qextserialport/qextserialport.h \
+    comtool/qextserialport/qextserialport_global.h \
+    comtool/qextserialport/qextserialport_p.h \
+    comtool/form/frmcomtool.h \
+    comtool/api/app.h \
+    comtool/api/quiwidget.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -43,10 +60,19 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    res/resource.qrc
+    res/resource.qrc \
+    buttondefence/main.qrc
 
 SUBDIRS += \
-    battery/battery.pro
+    battery/battery.pro \
+    buttondefence/buttondefence.pro
 
 FORMS += \
-    battery/frmbattery.ui
+    battery/frmbattery.ui \
+    buttondefence/frmbuttondefence.ui \
+    comtool/form/frmcomtool.ui
+
+win32:SOURCES += $$PWD/comtool/qextserialport/qextserialport_win.cpp
+unix:SOURCES += $$PWD/comtool/qextserialport/qextserialport_unix.cpp
+
+RC_FILE     = logo.rc

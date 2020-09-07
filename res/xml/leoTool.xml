@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
 	<layout>
-                <Node label="主界面" info="Leo Tool"></Node>
+                <Node label="主界面" info="Leo Tool" num="1"></Node>
 		<Node label="基础控件" collapse="0">
-						<Node label="电池电量控件" num="0"></Node>
-                        <Node label="LCD测试" num="1"></Node>
-                        <Node label="触摸屏测试"num="2"></Node>
-						<Node label="3D测试"num="3"></Node>
-						<Node label="打印"num="4"></Node>
+						<Node label="电池电量控件" num="2"></Node>
+                        <Node label="通用按钮地图效果" num="3"></Node>
 		</Node>
-		<Node label="系统测试" collapse="0">
+		<Node label="调试工具" collapse="0">
+						<Node label="串口调试助手" num="4"></Node>
 		</Node>
                 <Node label="帮助文档">
 		</Node>

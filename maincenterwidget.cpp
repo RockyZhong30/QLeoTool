@@ -61,11 +61,11 @@ void MainCenterWidget::initConnect()
     connect(m_centerWidget, SIGNAL(currentChanged(int)), this, SLOT(tabCurrentChanged(int)));
 }
 
-void MainCenterWidget::addFunWidget(QString name, int number, QWidget *wgt)
+void MainCenterWidget::addFunWidget(int number, QString name, QWidget *wgt)
 {
     for(int i = 0; i < m_lstTabWidgetIndex.count(); i++)
     {
-        if(m_lstTabWidgetIndex.at(i).name == name)
+        if(m_lstTabWidgetIndex.at(i).number == number)
         {
             m_centerWidget->setCurrentWidget(m_lstTabWidgetIndex.at(i).wgt);
             m_centerWidget->setTabText(m_centerWidget->currentIndex(), m_lstTabWidgetIndex.at(i).name);
@@ -81,6 +81,7 @@ void MainCenterWidget::addFunWidget(QString name, int number, QWidget *wgt)
     tab.number = number;
     tab.wgt = wgt;
     m_lstTabWidgetIndex.append(tab);
+    emit setLabelNavigation(name);
 }
 
 bool MainCenterWidget::isFunWidgetExist(int number)
@@ -106,7 +107,11 @@ void MainCenterWidget::tabCloseRequested(int index)
             for(int j = 0; j < m_lstTabWidgetIndex.count();)
             {
                 if(m_lstTabWidgetIndex.at(j).wgt == wgt)
+                {
                     m_lstTabWidgetIndex.removeAt(j);
+                    wgt->deleteLater();
+                    wgt = NULL;
+                }
                 else
                     j++;
             }
@@ -115,7 +120,10 @@ void MainCenterWidget::tabCloseRequested(int index)
     }
 
     m_centerWidget->removeTab(index);
-    emit hideNavListView("");
+    if(0 == m_centerWidget->count())
+    {
+        emit setLabelNavigation("");
+    }
 }
 
 void MainCenterWidget::tabCurrentChanged(int index)
@@ -126,7 +134,7 @@ void MainCenterWidget::tabCurrentChanged(int index)
     {
         if(m_lstTabWidgetIndex.at(i).name == m_centerWidget->tabText(index))
         {
-            emit hideNavListView(m_lstTabWidgetIndex.at(i).name);
+            emit setLabelNavigation(m_lstTabWidgetIndex.at(i).name);
             break;
         }
     }
@@ -134,6 +142,7 @@ void MainCenterWidget::tabCurrentChanged(int index)
 
 void MainCenterWidget::paintEvent(QPaintEvent *e)
 {
+    Q_UNUSED(e);
     QPainter painter(this);
     painter.drawPixmap(m_centerWidget->pos().x(), m_centerWidget->pos().y(), m_centerWidget->rect().width(), m_centerWidget->rect().height(), m_centerPix, 0, 0, m_centerPix.width(), m_centerPix.height());
 }

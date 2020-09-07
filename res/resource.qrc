@@ -16,11 +16,17 @@
         <file alias="help_cli">image/help_cli.png</file>
         <file alias="help_hov">image/help_hov.png</file>
         <file alias="help_nor">image/help_nor.png</file>
+        <file alias="bear">image/bear.jpg</file>
+        <file alias="logo">image/logo.ico</file>
+        <file alias="center_bg">image/center_bg.png</file>
     </qresource>
     <qresource prefix="/qss">
         <file alias="default">qss/default.qss</file>
     </qresource>
     <qresource prefix="/xml">
         <file alias="toolXml">xml/leoTool.xml</file>
+    </qresource>
+    <qresource prefix="/html">
+        <file alias="aboutHtml">html/about.html</file>
     </qresource>
 </RCC>

@@ -14,12 +14,14 @@ class MainCenterWidget : public BaseStyleWidget
         QString name;
         int number;
         QWidget *wgt;
+
+        stuTab() : name(""), number(0), wgt(NULL){}
     };
 
 public:
     explicit            MainCenterWidget(QWidget *parent = 0);
 
-    void                addFunWidget(QString name, int number, QWidget *wgt);
+    void                addFunWidget(int number, QString name = "", QWidget *wgt = NULL);
     bool                isFunWidgetExist(int number);
 public:
     QTabWidget          *m_centerWidget;
@@ -33,7 +35,7 @@ private slots:
     void                tabCurrentChanged(int index);
 
 signals:
-    void                hideNavListView(QString);
+    void                setLabelNavigation(QString);
     void                listViewPress(QModelIndex index);
 
 private:

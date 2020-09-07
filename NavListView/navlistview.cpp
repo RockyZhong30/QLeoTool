@@ -17,6 +17,7 @@ NavDelegate::~NavDelegate()
 
 QSize NavDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
+    Q_UNUSED(option);
     NavModel::TreeNode *node = (NavModel::TreeNode *)index.data(Qt::UserRole).toULongLong();
 
 	if (node->level == 1) {
@@ -253,7 +254,7 @@ void NavModel::readData(QString path)
 		node->collapse = nodeInfo.attribute("collapse").toInt();
 		node->info = nodeInfo.attribute("info");
 		node->level = 1;
-        node->num = -1;
+        node->num = nodeInfo.attribute("num").toInt();
 
 		QDomNodeList secondLevel = nodeInfo.childNodes();
 
@@ -346,6 +347,7 @@ void NavModel::setData(QStringList listItem)
 
 int NavModel::rowCount(const QModelIndex &parent) const
 {
+    Q_UNUSED(parent);
 	return listNode.size();
 }
 
@@ -355,7 +357,7 @@ QVariant NavModel::data(const QModelIndex &index, int role) const
 		return QVariant();
 	}
 
-	if (index.row() >= listNode.size() || index.row() < 0) {
+    if (index.row() >= (int)listNode.size() || index.row() < 0) {
 		return QVariant();
 	}
 
