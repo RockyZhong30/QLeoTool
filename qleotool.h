@@ -22,6 +22,7 @@ public:
         LeoTool_ButtonDefence,
         LeoTool_DeviceSizetable,
         LeoTool_FlatUi,
+        LeoTool_imageSwitch,
         LeoTool_ComTool,
         LeoTool_end
     };
@@ -31,6 +32,7 @@ public:
 
 private slots:
     void closeWidget();
+    void homePageWidget();
     void showNavigation();
 
     void navigationListViewClick(QModelIndex index);

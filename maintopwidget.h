@@ -28,7 +28,7 @@ public slots:
 signals:
     void            closeWidget();
     void            showNavigation();
-    void            mainTestWidget();
+    void            homePageWidget();
     void            helpTestWidget();
 
 protected:

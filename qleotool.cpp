@@ -10,6 +10,7 @@
 #include "comtool/form/frmcomtool.h"
 #include "devicesizetable/frmdevicesizetable.h"
 #include "flatui/frmflatui.h"
+#include "imageswitch/frmimageswitch.h"
 
 QLeoTool::QLeoTool(QWidget *parent)
     : ShadowWidget(parent)
@@ -34,6 +35,7 @@ void QLeoTool::initUi()
 void QLeoTool::initConnect()
 {
     connect(m_topWidget, &MainTopWidget::closeWidget, this, &QLeoTool::closeWidget);
+    connect(m_topWidget, &MainTopWidget::homePageWidget, this, &QLeoTool::homePageWidget);
     connect(m_topWidget, &MainTopWidget::showNavigation, this, &QLeoTool::showNavigation);
 
     connect(m_centerWidget, &MainCenterWidget::listViewPress, this, &QLeoTool::navigationListViewClick);
@@ -51,6 +53,18 @@ void QLeoTool::initParameter()
 void QLeoTool::closeWidget()
 {
     qApp->quit();
+}
+
+void QLeoTool::homePageWidget()
+{
+    if(m_centerWidget->isFunWidgetExist(LeoTool_homePage))
+    {
+        m_centerWidget->addFunWidget(LeoTool_homePage);
+    }
+    else
+    {
+        m_centerWidget->addFunWidget(LeoTool_homePage, "首页", new LeoHomePage(this));
+    }
 }
 
 void QLeoTool::showNavigation()
@@ -117,6 +131,12 @@ void QLeoTool::navigationListViewClick(QModelIndex index)
         {
             wgt = new frmFlatUI(this);
             name = "FlatUI控件集合";
+            break;
+        }
+        case LeoTool_imageSwitch:
+        {
+            wgt = new frmImageSwitch(this);
+            name = "图片开关控件";
             break;
         }
         default:

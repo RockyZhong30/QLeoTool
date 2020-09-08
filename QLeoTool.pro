@@ -35,7 +35,9 @@ SOURCES += \
     devicesizetable/devicesizetable.cpp \
     devicesizetable/frmdevicesizetable.cpp \
     flatui/flatui.cpp \
-    flatui/frmflatui.cpp
+    flatui/frmflatui.cpp \
+    imageswitch/frmimageswitch.cpp \
+    imageswitch/imageswitch.cpp
 
 HEADERS += \
     NavListView/navlistview.h \
@@ -60,7 +62,9 @@ HEADERS += \
     devicesizetable/devicesizetable.h \
     devicesizetable/frmdevicesizetable.h \
     flatui/flatui.h \
-    flatui/frmflatui.h
+    flatui/frmflatui.h \
+    imageswitch/frmimageswitch.h \
+    imageswitch/imageswitch.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -69,7 +73,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     res/resource.qrc \
-    buttondefence/main.qrc
+    buttondefence/main.qrc \
+    imageswitch/main.qrc
 
 SUBDIRS += \
     battery/battery.pro \
@@ -80,7 +85,8 @@ FORMS += \
     buttondefence/frmbuttondefence.ui \
     comtool/form/frmcomtool.ui \
     devicesizetable/frmdevicesizetable.ui \
-    flatui/frmflatui.ui
+    flatui/frmflatui.ui \
+    imageswitch/frmimageswitch.ui
 
 win32:SOURCES += $$PWD/comtool/qextserialport/qextserialport_win.cpp
 unix:SOURCES += $$PWD/comtool/qextserialport/qextserialport_unix.cpp

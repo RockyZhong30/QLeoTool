@@ -114,7 +114,7 @@
   <customwidget>
    <class>DeviceSizeTable</class>
    <extends>QTableWidget</extends>
-   <header>devicesizetable.h</header>
+   <header>devicesizetable/devicesizetable.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

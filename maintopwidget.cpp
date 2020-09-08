@@ -96,6 +96,8 @@ void MainTopWidget::initConnect()
 {
     connect(m_btnNavigation, &QPushButton::clicked, this, &MainTopWidget::showNavigation);
     connect(m_btnQuit, &QPushButton::clicked, this, &MainTopWidget::closeWidget);
+    connect(m_btnHome, &QPushButton::clicked, this, &MainTopWidget::homePageWidget);
+
 }
 
 void MainTopWidget::setLabelNavigation(QString name)

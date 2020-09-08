@@ -7,9 +7,10 @@
                         <Node label="通用按钮地图效果" num="3"></Node>
 						<Node label="硬盘容量控件" num="4"></Node>
 						<Node label="FlatUI控件集合" num="5"></Node>
+						<Node label="图片开关控件" num="6"></Node>
 		</Node>
 		<Node label="调试工具" collapse="0">
-						<Node label="串口调试助手" num="6"></Node>
+						<Node label="串口调试助手" num="7"></Node>
 		</Node>
                 <Node label="帮助文档">
 		</Node>
