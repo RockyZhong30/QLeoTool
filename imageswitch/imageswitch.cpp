@@ -9,8 +9,8 @@ ImageSwitch::ImageSwitch(QWidget *parent) : QWidget(parent)
     isChecked = false;
     buttonStyle = ButtonStyle_2;
 
-    imgOffFile = ":/image/btncheckoff2.png";
-    imgOnFile = ":/image/btncheckon2.png";
+    imgOffFile = ":/imageswitch/btncheckoff2";
+    imgOnFile = ":/imageswitch/btncheckon2";
     imgFile = imgOffFile;
 }
 
@@ -70,16 +70,16 @@ void ImageSwitch::setButtonStyle(const ImageSwitch::ButtonStyle &buttonStyle)
         this->buttonStyle = buttonStyle;
 
         if (buttonStyle == ButtonStyle_1) {
-            imgOffFile = ":/image/btncheckoff1.png";
-            imgOnFile = ":/image/btncheckon1.png";
+            imgOffFile = ":/imageswitch/btncheckoff1";
+            imgOnFile = ":/imageswitch/btncheckon1";
             this->resize(87, 28);
         } else if (buttonStyle == ButtonStyle_2) {
-            imgOffFile = ":/image/btncheckoff2.png";
-            imgOnFile = ":/image/btncheckon2.png";
+            imgOffFile = ":/imageswitch/btncheckoff2";
+            imgOnFile = ":/imageswitch/btncheckon2";
             this->resize(87, 28);
         } else if (buttonStyle == ButtonStyle_3) {
-            imgOffFile = ":/image/btncheckoff3.png";
-            imgOnFile = ":/image/btncheckon3.png";
+            imgOffFile = ":/imageswitch/btncheckoff3";
+            imgOnFile = ":/imageswitch/btncheckon3";
             this->resize(96, 38);
         }
 

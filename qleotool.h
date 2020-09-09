@@ -23,7 +23,12 @@ public:
         LeoTool_DeviceSizetable,
         LeoTool_FlatUi,
         LeoTool_imageSwitch,
+        LeoTool_IpAdress,
+        LeoTool_MoveWidget,
+        LeoTool_LunarCalenarWidget,
+        LeoTool_NavButton,
         LeoTool_ComTool,
+        LeoTool_NetTool,
         LeoTool_end
     };
 

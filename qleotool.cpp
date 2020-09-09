@@ -11,6 +11,11 @@
 #include "devicesizetable/frmdevicesizetable.h"
 #include "flatui/frmflatui.h"
 #include "imageswitch/frmimageswitch.h"
+#include "ipaddress/frmipaddress.h"
+#include "movewidget/frmmovewidget.h"
+#include "lunarcalendarwidget/frmlunarcalendarwidget.h"
+#include "navbutton/frmnavbutton.h"
+#include "nettool/form/frmmain.h"
 
 QLeoTool::QLeoTool(QWidget *parent)
     : ShadowWidget(parent)
@@ -137,6 +142,36 @@ void QLeoTool::navigationListViewClick(QModelIndex index)
         {
             wgt = new frmImageSwitch(this);
             name = "图片开关控件";
+            break;
+        }
+        case LeoTool_IpAdress:
+        {
+            wgt = new frmIPAddress(this);
+            name = "IP地址输入控件";
+            break;
+        }
+        case LeoTool_MoveWidget:
+        {
+            wgt = new frmMoveWidget(this);
+            name = "通用控件移动类";
+            break;
+        }
+        case LeoTool_LunarCalenarWidget:
+        {
+            wgt = new frmLunarCalendarWidget(this);
+            name = "农历控件";
+            break;
+        }
+        case LeoTool_NavButton:
+        {
+            wgt = new frmNavButton(this);
+            name = "导航按钮控件";
+            break;
+        }
+        case LeoTool_NetTool:
+        {
+            wgt = new frmMain(this);
+            name = "网络中转服务器";
             break;
         }
         default:

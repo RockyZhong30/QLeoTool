@@ -19,6 +19,7 @@
         <file alias="bear">image/bear.jpg</file>
         <file alias="logo">image/logo.ico</file>
         <file alias="center_bg">image/center_bg.png</file>
+        <file alias="fontawesome">image/fontawesome-webfont.ttf</file>
     </qresource>
     <qresource prefix="/qss">
         <file alias="default">qss/default.qss</file>
@@ -28,5 +29,54 @@
     </qresource>
     <qresource prefix="/html">
         <file alias="aboutHtml">html/about.html</file>
+    </qresource>
+    <qresource prefix="/buttondefence">
+        <file alias="bg_call">image/buttondefence/bg_call.jpg</file>
+        <file alias="btn_defence_alarm_bubble">image/buttondefence/btn_defence_alarm_bubble.png</file>
+        <file alias="btn_defence_alarm_bubble2">image/buttondefence/btn_defence_alarm_bubble2.png</file>
+        <file alias="btn_defence_alarm_circle">image/buttondefence/btn_defence_alarm_circle.png</file>
+        <file alias="btn_defence_alarm_custom">image/buttondefence/btn_defence_alarm_custom.png</file>
+        <file alias="btn_defence_alarm_msg">image/buttondefence/btn_defence_alarm_msg.png</file>
+        <file alias="btn_defence_alarm_msg2">image/buttondefence/btn_defence_alarm_msg2.png</file>
+        <file alias="btn_defence_alarm_police">image/buttondefence/btn_defence_alarm_police.png</file>
+        <file alias="btn_defence_arming_bubble">image/buttondefence/btn_defence_arming_bubble.png</file>
+        <file alias="btn_defence_arming_bubble2">image/buttondefence/btn_defence_arming_bubble2.png</file>
+        <file alias="btn_defence_arming_circle">image/buttondefence/btn_defence_arming_circle.png</file>
+        <file alias="btn_defence_arming_custom">image/buttondefence/btn_defence_arming_custom.png</file>
+        <file alias="btn_defence_arming_msg">image/buttondefence/btn_defence_arming_msg.png</file>
+        <file alias="btn_defence_arming_msg2">image/buttondefence/btn_defence_arming_msg2.png</file>
+        <file alias="btn_defence_arming_police">image/buttondefence/btn_defence_arming_police.png</file>
+        <file alias="btn_defence_bypass_bubble">image/buttondefence/btn_defence_bypass_bubble.png</file>
+        <file alias="btn_defence_bypass_bubble2">image/buttondefence/btn_defence_bypass_bubble2.png</file>
+        <file alias="btn_defence_bypass_circle">image/buttondefence/btn_defence_bypass_circle.png</file>
+        <file alias="btn_defence_bypass_custom">image/buttondefence/btn_defence_bypass_custom.png</file>
+        <file alias="btn_defence_bypass_msg">image/buttondefence/btn_defence_bypass_msg.png</file>
+        <file alias="btn_defence_bypass_msg2">image/buttondefence/btn_defence_bypass_msg2.png</file>
+        <file alias="btn_defence_bypass_police">image/buttondefence/btn_defence_bypass_police.png</file>
+        <file alias="btn_defence_disarming_bubble">image/buttondefence/btn_defence_disarming_bubble.png</file>
+        <file alias="btn_defence_disarming_bubble2">image/buttondefence/btn_defence_disarming_bubble2.png</file>
+        <file alias="btn_defence_disarming_circle">image/buttondefence/btn_defence_disarming_circle.png</file>
+        <file alias="btn_defence_disarming_custom">image/buttondefence/btn_defence_disarming_custom.png</file>
+        <file alias="btn_defence_disarming_msg">image/buttondefence/btn_defence_disarming_msg.png</file>
+        <file alias="btn_defence_disarming_msg2">image/buttondefence/btn_defence_disarming_msg2.png</file>
+        <file alias="btn_defence_disarming_police">image/buttondefence/btn_defence_disarming_police.png</file>
+        <file alias="btn_defence_error_bubble">image/buttondefence/btn_defence_error_bubble.png</file>
+        <file alias="btn_defence_error_bubble2">image/buttondefence/btn_defence_error_bubble2.png</file>
+        <file alias="btn_defence_error_circle">image/buttondefence/btn_defence_error_circle.png</file>
+        <file alias="btn_defence_error_custom">image/buttondefence/btn_defence_error_custom.png</file>
+        <file alias="btn_defence_error_msg">image/buttondefence/btn_defence_error_msg.png</file>
+        <file alias="btn_defence_error_msg2">image/buttondefence/btn_defence_error_msg2.png</file>
+        <file alias="btn_defence_error_police">image/buttondefence/btn_defence_error_police.png</file>
+    </qresource>
+    <qresource prefix="/imageswitch">
+        <file alias="btncheckoff1">image/imageswitch/btncheckoff1.png</file>
+        <file alias="btncheckoff2">image/imageswitch/btncheckoff2.png</file>
+        <file alias="btncheckoff3">image/imageswitch/btncheckoff3.png</file>
+        <file alias="btncheckon1">image/imageswitch/btncheckon1.png</file>
+        <file alias="btncheckon2">image/imageswitch/btncheckon2.png</file>
+        <file alias="btncheckon3">image/imageswitch/btncheckon3.png</file>
+    </qresource>
+    <qresource prefix="/lunarcalendarwidget">
+        <file alias="bg_calendar">image/lunarcalendarwidget/bg_calendar.png</file>
     </qresource>
 </RCC>

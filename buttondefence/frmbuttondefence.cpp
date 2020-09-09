@@ -17,7 +17,7 @@ frmButtonDefence::~frmButtonDefence()
 void frmButtonDefence::initForm()
 {
     //设置背景地图
-    ui->labMap->setStyleSheet("border-image:url(:/image/bg_call.jpg);");
+    ui->labMap->setStyleSheet("border-image:url(:/buttondefence/bg_call);");
 
     btn1 = new ButtonDefence(ui->labMap);
     btn1->setText("#1");

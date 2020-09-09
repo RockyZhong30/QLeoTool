@@ -30,14 +30,31 @@ SOURCES += \
     leohomepage.cpp \
     comtool/qextserialport/qextserialport.cpp \
     comtool/form/frmcomtool.cpp \
-    comtool/api/app.cpp \
-    comtool/api/quiwidget.cpp \
     devicesizetable/devicesizetable.cpp \
     devicesizetable/frmdevicesizetable.cpp \
     flatui/flatui.cpp \
     flatui/frmflatui.cpp \
     imageswitch/frmimageswitch.cpp \
-    imageswitch/imageswitch.cpp
+    imageswitch/imageswitch.cpp \
+    ipaddress/frmipaddress.cpp \
+    ipaddress/ipaddress.cpp \
+    movewidget/frmmovewidget.cpp \
+    movewidget/movewidget.cpp \
+    lunarcalendarwidget/frmlunarcalendarwidget.cpp \
+    lunarcalendarwidget/lunarcalendarinfo.cpp \
+    lunarcalendarwidget/lunarcalendaritem.cpp \
+    lunarcalendarwidget/lunarcalendarwidget.cpp \
+    navbutton/frmnavbutton.cpp \
+    navbutton/navbutton.cpp \
+    common/iconhelper.cpp \
+    nettool/form/frmmain.cpp \
+    nettool/form/frmtcpclient.cpp \
+    nettool/form/frmtcpserver.cpp \
+    nettool/form/frmudpclient.cpp \
+    nettool/form/frmudpserver.cpp \
+    common/tcpserver.cpp \
+    common/app.cpp \
+    common/quiwidget.cpp
 
 HEADERS += \
     NavListView/navlistview.h \
@@ -52,19 +69,36 @@ HEADERS += \
     buttondefence/buttondefence.h \
     buttondefence/frmbuttondefence.h \
     leohomepage.h \
-    comtool/head.h \
     comtool/qextserialport/qextserialport.h \
     comtool/qextserialport/qextserialport_global.h \
     comtool/qextserialport/qextserialport_p.h \
     comtool/form/frmcomtool.h \
-    comtool/api/app.h \
-    comtool/api/quiwidget.h \
     devicesizetable/devicesizetable.h \
     devicesizetable/frmdevicesizetable.h \
     flatui/flatui.h \
     flatui/frmflatui.h \
     imageswitch/frmimageswitch.h \
-    imageswitch/imageswitch.h
+    imageswitch/imageswitch.h \
+    ipaddress/frmipaddress.h \
+    ipaddress/ipaddress.h \
+    movewidget/frmmovewidget.h \
+    movewidget/movewidget.h \
+    lunarcalendarwidget/frmlunarcalendarwidget.h \
+    lunarcalendarwidget/lunarcalendarinfo.h \
+    lunarcalendarwidget/lunarcalendaritem.h \
+    lunarcalendarwidget/lunarcalendarwidget.h \
+    navbutton/frmnavbutton.h \
+    navbutton/navbutton.h \
+    common/iconhelper.h \
+    nettool/form/frmmain.h \
+    nettool/form/frmtcpclient.h \
+    nettool/form/frmtcpserver.h \
+    nettool/form/frmudpclient.h \
+    nettool/form/frmudpserver.h \
+    common/tcpserver.h \
+    common/app.h \
+    common/head.h \
+    common/quiwidget.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -72,9 +106,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    res/resource.qrc \
-    buttondefence/main.qrc \
-    imageswitch/main.qrc
+    res/resource.qrc
 
 SUBDIRS += \
     battery/battery.pro \
@@ -86,7 +118,16 @@ FORMS += \
     comtool/form/frmcomtool.ui \
     devicesizetable/frmdevicesizetable.ui \
     flatui/frmflatui.ui \
-    imageswitch/frmimageswitch.ui
+    imageswitch/frmimageswitch.ui \
+    ipaddress/frmipaddress.ui \
+    movewidget/frmmovewidget.ui \
+    lunarcalendarwidget/frmlunarcalendarwidget.ui \
+    navbutton/frmnavbutton.ui \
+    nettool/form/frmmain.ui \
+    nettool/form/frmtcpclient.ui \
+    nettool/form/frmtcpserver.ui \
+    nettool/form/frmudpclient.ui \
+    nettool/form/frmudpserver.ui
 
 win32:SOURCES += $$PWD/comtool/qextserialport/qextserialport_win.cpp
 unix:SOURCES += $$PWD/comtool/qextserialport/qextserialport_unix.cpp
