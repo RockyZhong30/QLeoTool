@@ -27,8 +27,12 @@ public:
         LeoTool_MoveWidget,
         LeoTool_LunarCalenarWidget,
         LeoTool_NavButton,
+        LeoTool_VideoPanel,
+        LeoTool_LightButton,
         LeoTool_ComTool,
         LeoTool_NetTool,
+        LeoTool_PngTool,
+        LeoTool_QwtDemo,
         LeoTool_end
     };
 

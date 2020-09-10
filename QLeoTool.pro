@@ -15,6 +15,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+###****************************PWD***********************
+include ($$PWD/qwtsource/qwt/qwt.pri)
+INCLUDEPATH += $$PWD
+INCLUDEPATH += $$PWD/qwtsource/qwt
+###******************************************************
+
 SOURCES += \
     NavListView/navlistview.cpp \
     common/basestylewidget.cpp \
@@ -54,7 +60,13 @@ SOURCES += \
     nettool/form/frmudpserver.cpp \
     common/tcpserver.cpp \
     common/app.cpp \
-    common/quiwidget.cpp
+    common/quiwidget.cpp \
+    pngtool/frmpngtool.cpp \
+    qwtsource/frmqwtdemo.cpp \
+    videopanel/frmvideopanel.cpp \
+    videopanel/videopanel.cpp \
+    lightbutton/frmlightbutton.cpp \
+    lightbutton/lightbutton.cpp
 
 HEADERS += \
     NavListView/navlistview.h \
@@ -98,7 +110,13 @@ HEADERS += \
     common/tcpserver.h \
     common/app.h \
     common/head.h \
-    common/quiwidget.h
+    common/quiwidget.h \
+    pngtool/frmpngtool.h \
+    qwtsource/frmqwtdemo.h \
+    videopanel/frmvideopanel.h \
+    videopanel/videopanel.h \
+    lightbutton/frmlightbutton.h \
+    lightbutton/lightbutton.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -127,7 +145,11 @@ FORMS += \
     nettool/form/frmtcpclient.ui \
     nettool/form/frmtcpserver.ui \
     nettool/form/frmudpclient.ui \
-    nettool/form/frmudpserver.ui
+    nettool/form/frmudpserver.ui \
+    pngtool/frmpngtool.ui \
+    qwtsource/frmqwtdemo.ui \
+    videopanel/frmvideopanel.ui \
+    lightbutton/frmlightbutton.ui
 
 win32:SOURCES += $$PWD/comtool/qextserialport/qextserialport_win.cpp
 unix:SOURCES += $$PWD/comtool/qextserialport/qextserialport_unix.cpp

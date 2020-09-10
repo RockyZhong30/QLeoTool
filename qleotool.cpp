@@ -16,6 +16,10 @@
 #include "lunarcalendarwidget/frmlunarcalendarwidget.h"
 #include "navbutton/frmnavbutton.h"
 #include "nettool/form/frmmain.h"
+#include "pngtool/frmpngtool.h"
+#include "qwtsource/frmqwtdemo.h"
+#include "videopanel/frmvideopanel.h"
+#include "lightbutton/frmlightbutton.h"
 
 QLeoTool::QLeoTool(QWidget *parent)
     : ShadowWidget(parent)
@@ -172,6 +176,30 @@ void QLeoTool::navigationListViewClick(QModelIndex index)
         {
             wgt = new frmMain(this);
             name = "网络中转服务器";
+            break;
+        }
+        case LeoTool_PngTool:
+        {
+            wgt = new frmPngTool(this);
+            name = "PNG图片警告去除工具";
+            break;
+        }
+        case LeoTool_QwtDemo:
+        {
+            wgt = new frmQwtDemo(this);
+            name = "qwt demo";
+            break;
+        }
+        case LeoTool_VideoPanel:
+        {
+            wgt = new frmVideoPanel(this);
+            name = "视频监控画面分割";
+            break;
+        }
+        case LeoTool_LightButton:
+        {
+            wgt = new frmLightButton(this);
+            name = "高亮按钮控件";
             break;
         }
         default:
