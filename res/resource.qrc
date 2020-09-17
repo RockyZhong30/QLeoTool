@@ -79,4 +79,22 @@
     <qresource prefix="/lunarcalendarwidget">
         <file alias="bg_calendar">image/lunarcalendarwidget/bg_calendar.png</file>
     </qresource>
+    <qresource prefix="/AnimationButton">
+        <file alias="v-home-ico-contact">image/AnimationButton/v-home-ico-contact.png</file>
+        <file alias="v-home-ico-home">image/AnimationButton/v-home-ico-home.png</file>
+        <file alias="v-home-ico-img">image/AnimationButton/v-home-ico-img.png</file>
+        <file alias="v-home-ico-record">image/AnimationButton/v-home-ico-record.png</file>
+    </qresource>
+    <qresource prefix="/calculator">
+        <file>image/Calculator/banben.png</file>
+        <file>image/Calculator/clear.png</file>
+        <file>image/Calculator/fold.png</file>
+        <file>image/Calculator/go-previous.png</file>
+        <file>image/Calculator/qt-logo.png</file>
+        <file>image/Calculator/redo.png</file>
+        <file>image/Calculator/screen.png</file>
+        <file>image/Calculator/services.png</file>
+        <file>image/Calculator/undo.png</file>
+        <file>image/Calculator/unfold.png</file>
+    </qresource>
 </RCC>

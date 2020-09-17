@@ -1,6 +1,6 @@
 ﻿#include "frmcomtool.h"
 #include "ui_frmcomtool.h"
-#include "comtool/api/quiwidget.h"
+#include "common/quiwidget.h"
 
 frmComTool::frmComTool(QWidget *parent) : QWidget(parent), ui(new Ui::frmComTool)
 {

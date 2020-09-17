@@ -29,10 +29,14 @@ public:
         LeoTool_NavButton,
         LeoTool_VideoPanel,
         LeoTool_LightButton,
+        LeoTool_AnimationButton,
+        LeoTool_BarRuler,
+        LeoTool_Calculator,
         LeoTool_ComTool,
         LeoTool_NetTool,
         LeoTool_PngTool,
         LeoTool_QwtDemo,
+        LeoTool_2048Game,
         LeoTool_end
     };
 

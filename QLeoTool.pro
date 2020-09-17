@@ -66,7 +66,30 @@ SOURCES += \
     videopanel/frmvideopanel.cpp \
     videopanel/videopanel.cpp \
     lightbutton/frmlightbutton.cpp \
-    lightbutton/lightbutton.cpp
+    lightbutton/lightbutton.cpp \
+    2048/gui/qgameboard.cpp \
+    2048/gui/qgameoverwindow.cpp \
+    2048/gui/qresetbutton.cpp \
+    2048/gui/qtile.cpp \
+    2048/core/board.cpp \
+    2048/core/game.cpp \
+    2048/core/observer.cpp \
+    2048/core/subject.cpp \
+    2048/core/tile.cpp \
+    AnimationButton/animationbutton.cpp \
+    AnimationButton/frmanimationbutton.cpp \
+    barruler/barruler.cpp \
+    barruler/frmbarruler.cpp \
+    calculator/BigInt.cpp \
+    calculator/Calc.cpp \
+    calculator/Calculator.cpp \
+    calculator/ChildWindow.cpp \
+    calculator/Complex.cpp \
+    calculator/GeneticAlgorithm.cpp \
+    calculator/HugeCalc.cpp \
+    calculator/linearAlgebra.cpp \
+    calculator/nonLinearAlgebra.cpp \
+    calculator/polynomial.cpp
 
 HEADERS += \
     NavListView/navlistview.h \
@@ -116,7 +139,31 @@ HEADERS += \
     videopanel/frmvideopanel.h \
     videopanel/videopanel.h \
     lightbutton/frmlightbutton.h \
-    lightbutton/lightbutton.h
+    lightbutton/lightbutton.h \
+    2048/gui/qgameboard.h \
+    2048/gui/qgameoverwindow.h \
+    2048/gui/qresetbutton.h \
+    2048/gui/qtile.h \
+    2048/gui/qwinwindow.h \
+    2048/core/board.h \
+    2048/core/game.h \
+    2048/core/observer.h \
+    2048/core/subject.h \
+    2048/core/tile.h \
+    AnimationButton/animationbutton.h \
+    AnimationButton/frmanimationbutton.h \
+    barruler/barruler.h \
+    barruler/frmbarruler.h \
+    calculator/BigInt.h \
+    calculator/Calc.h \
+    calculator/Calculator.h \
+    calculator/ChildWindow.h \
+    calculator/Complex.h \
+    calculator/GeneticAlgorithm.h \
+    calculator/HugeCalc.h \
+    calculator/linearAlgebra.h \
+    calculator/nonLinearAlgebra.h \
+    calculator/polynomial.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -149,7 +196,18 @@ FORMS += \
     pngtool/frmpngtool.ui \
     qwtsource/frmqwtdemo.ui \
     videopanel/frmvideopanel.ui \
-    lightbutton/frmlightbutton.ui
+    lightbutton/frmlightbutton.ui \
+    AnimationButton/frmanimationbutton.ui \
+    barruler/frmbarruler.ui \
+    calculator/about.ui \
+    calculator/calculator.ui \
+    calculator/constant.ui \
+    calculator/history.ui \
+    calculator/hugeCalc.ui \
+    calculator/linearAlgebra.ui \
+    calculator/nonLinearAlgebra.ui \
+    calculator/permAndComb.ui \
+    calculator/variable.ui
 
 win32:SOURCES += $$PWD/comtool/qextserialport/qextserialport_win.cpp
 unix:SOURCES += $$PWD/comtool/qextserialport/qextserialport_unix.cpp

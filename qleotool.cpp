@@ -20,6 +20,10 @@
 #include "qwtsource/frmqwtdemo.h"
 #include "videopanel/frmvideopanel.h"
 #include "lightbutton/frmlightbutton.h"
+#include "2048/gui/qgameboard.h"
+#include "AnimationButton/frmanimationbutton.h"
+#include "barruler/frmbarruler.h"
+#include "calculator/Calculator.h"
 
 QLeoTool::QLeoTool(QWidget *parent)
     : ShadowWidget(parent)
@@ -200,6 +204,30 @@ void QLeoTool::navigationListViewClick(QModelIndex index)
         {
             wgt = new frmLightButton(this);
             name = "高亮按钮控件";
+            break;
+        }
+        case LeoTool_2048Game:
+        {
+            wgt = new QGameBoard(this);
+            name = "2048";
+            break;
+        }
+        case LeoTool_AnimationButton:
+        {
+            wgt = new frmAnimationButton(this);
+            name = "Animation动态按钮";
+            break;
+        }
+        case LeoTool_BarRuler:
+        {
+            wgt = new frmBarRuler(this);
+            name = "柱状标尺控件";
+            break;
+        }
+        case LeoTool_Calculator:
+        {
+            wgt = new Calculator(this);
+            name = "计算器";
             break;
         }
         default:
