@@ -89,7 +89,13 @@ SOURCES += \
     calculator/HugeCalc.cpp \
     calculator/linearAlgebra.cpp \
     calculator/nonLinearAlgebra.cpp \
-    calculator/polynomial.cpp
+    calculator/polynomial.cpp \
+    curvechart/curvechart.cpp \
+    curvechart/frmcurvechart.cpp \
+    lednumber/frmlednumber.cpp \
+    lednumber/lednumber.cpp \
+    roundPlot/frmroundplot.cpp \
+    roundPlot/roundplot.cpp
 
 HEADERS += \
     NavListView/navlistview.h \
@@ -163,7 +169,13 @@ HEADERS += \
     calculator/HugeCalc.h \
     calculator/linearAlgebra.h \
     calculator/nonLinearAlgebra.h \
-    calculator/polynomial.h
+    calculator/polynomial.h \
+    curvechart/curvechart.h \
+    curvechart/frmcurvechart.h \
+    lednumber/frmlednumber.h \
+    lednumber/lednumber.h \
+    roundPlot/frmroundplot.h \
+    roundPlot/roundplot.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -207,7 +219,10 @@ FORMS += \
     calculator/linearAlgebra.ui \
     calculator/nonLinearAlgebra.ui \
     calculator/permAndComb.ui \
-    calculator/variable.ui
+    calculator/variable.ui \
+    curvechart/frmcurvechart.ui \
+    lednumber/frmlednumber.ui \
+    roundPlot/frmroundplot.ui
 
 win32:SOURCES += $$PWD/comtool/qextserialport/qextserialport_win.cpp
 unix:SOURCES += $$PWD/comtool/qextserialport/qextserialport_unix.cpp
