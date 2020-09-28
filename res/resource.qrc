@@ -97,4 +97,9 @@
         <file>image/Calculator/undo.png</file>
         <file>image/Calculator/unfold.png</file>
     </qresource>
+    <qresource prefix="/adswidget">
+        <file>image/adswidget/ad1.png</file>
+        <file>image/adswidget/ad2.png</file>
+        <file>image/adswidget/ad3.png</file>
+    </qresource>
 </RCC>

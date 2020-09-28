@@ -27,6 +27,11 @@
 #include "curvechart/frmcurvechart.h"
 #include "lednumber/frmlednumber.h"
 #include "roundPlot/frmroundplot.h"
+#include "adswidget/frmadswidget2.h"
+#include "barvolume/frmbarvolume.h"
+#include "mouse/frmmouse.h"
+#include "roundcircle/frmroundcircle.h"
+#include "drawtextonPath/frmdrawtextonpath.h"
 
 QLeoTool::QLeoTool(QWidget *parent)
     : ShadowWidget(parent)
@@ -207,6 +212,11 @@ void QLeoTool::navigationListViewClick(QModelIndex index)
             wgt = new frmBarRuler(this);
             break;
         }
+        case LeoTool_BarVolume:
+        {
+            wgt = new frmBarVolume(this);
+            break;
+        }
         case LeoTool_Calculator:
         {
             wgt = new Calculator(this);
@@ -225,6 +235,26 @@ void QLeoTool::navigationListViewClick(QModelIndex index)
         case LeoTool_RoundPlot:
         {
             wgt = new frmRoundPlot(this);
+            break;
+        }
+        case LeoTool_AdsWidget:
+        {
+            wgt = new frmAdsWidget2(this);
+            break;
+        }
+        case LeoTool_Mouse:
+        {
+            wgt = new frmMouse(this);
+            break;
+        }
+        case LeoTool_RoundCircle:
+        {
+            wgt = new frmRoundCircle(this);
+            break;
+        }
+        case LeoTool_DrawTextOnPath:
+        {
+            wgt = new frmDrawTextOnPath(this);
             break;
         }
         default:

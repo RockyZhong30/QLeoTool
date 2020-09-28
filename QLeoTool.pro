@@ -95,7 +95,17 @@ SOURCES += \
     lednumber/frmlednumber.cpp \
     lednumber/lednumber.cpp \
     roundPlot/frmroundplot.cpp \
-    roundPlot/roundplot.cpp
+    roundPlot/roundplot.cpp \
+    adswidget/adswidget2.cpp \
+    adswidget/frmadswidget2.cpp \
+    barvolume/barvolume.cpp \
+    barvolume/frmbarvolume.cpp \
+    mouse/frmmouse.cpp \
+    mouse/mouse.cpp \
+    roundcircle/frmroundcircle.cpp \
+    roundcircle/roundcircle.cpp \
+    drawtextonPath/drawtextonarcpath.cpp \
+    drawtextonPath/frmdrawtextonpath.cpp
 
 HEADERS += \
     NavListView/navlistview.h \
@@ -175,7 +185,17 @@ HEADERS += \
     lednumber/frmlednumber.h \
     lednumber/lednumber.h \
     roundPlot/frmroundplot.h \
-    roundPlot/roundplot.h
+    roundPlot/roundplot.h \
+    adswidget/adswidget2.h \
+    adswidget/frmadswidget2.h \
+    barvolume/barvolume.h \
+    barvolume/frmbarvolume.h \
+    mouse/frmmouse.h \
+    mouse/mouse.h \
+    roundcircle/frmroundcircle.h \
+    roundcircle/roundcircle.h \
+    drawtextonPath/drawtextonarcpath.h \
+    drawtextonPath/frmdrawtextonpath.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -222,7 +242,12 @@ FORMS += \
     calculator/variable.ui \
     curvechart/frmcurvechart.ui \
     lednumber/frmlednumber.ui \
-    roundPlot/frmroundplot.ui
+    roundPlot/frmroundplot.ui \
+    adswidget/frmadswidget2.ui \
+    barvolume/frmbarvolume.ui \
+    mouse/frmmouse.ui \
+    roundcircle/frmroundcircle.ui \
+    drawtextonPath/frmdrawtextonpath.ui
 
 win32:SOURCES += $$PWD/comtool/qextserialport/qextserialport_win.cpp
 unix:SOURCES += $$PWD/comtool/qextserialport/qextserialport_unix.cpp
