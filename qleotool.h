@@ -39,6 +39,7 @@ public:
         LeoTool_Mouse,
         LeoTool_RoundCircle,
         LeoTool_DrawTextOnPath,
+        LeoTool_RouletteDraw,
         LeoTool_Calculator,
         LeoTool_ComTool,
         LeoTool_NetTool,

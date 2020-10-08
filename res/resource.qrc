@@ -102,4 +102,8 @@
         <file>image/adswidget/ad2.png</file>
         <file>image/adswidget/ad3.png</file>
     </qresource>
+    <qresource prefix="/roulettedraw">
+        <file>image/roulettedraw/back.png</file>
+        <file>image/roulettedraw/pointer.png</file>
+    </qresource>
 </RCC>

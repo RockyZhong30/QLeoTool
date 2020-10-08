@@ -32,6 +32,7 @@
 #include "mouse/frmmouse.h"
 #include "roundcircle/frmroundcircle.h"
 #include "drawtextonPath/frmdrawtextonpath.h"
+#include "roulettedraw/frmroulettedraw.h"
 
 QLeoTool::QLeoTool(QWidget *parent)
     : ShadowWidget(parent)
@@ -255,6 +256,11 @@ void QLeoTool::navigationListViewClick(QModelIndex index)
         case LeoTool_DrawTextOnPath:
         {
             wgt = new frmDrawTextOnPath(this);
+            break;
+        }
+        case LeoTool_RouletteDraw:
+        {
+            wgt = new frmRouletteDraw(this);
             break;
         }
         default:

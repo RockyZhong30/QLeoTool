@@ -105,7 +105,9 @@ SOURCES += \
     roundcircle/frmroundcircle.cpp \
     roundcircle/roundcircle.cpp \
     drawtextonPath/drawtextonarcpath.cpp \
-    drawtextonPath/frmdrawtextonpath.cpp
+    drawtextonPath/frmdrawtextonpath.cpp \
+    roulettedraw/roulettedraw.cpp \
+    roulettedraw/frmroulettedraw.cpp
 
 HEADERS += \
     NavListView/navlistview.h \
@@ -195,7 +197,9 @@ HEADERS += \
     roundcircle/frmroundcircle.h \
     roundcircle/roundcircle.h \
     drawtextonPath/drawtextonarcpath.h \
-    drawtextonPath/frmdrawtextonpath.h
+    drawtextonPath/frmdrawtextonpath.h \
+    roulettedraw/roulettedraw.h \
+    roulettedraw/frmroulettedraw.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -247,7 +251,8 @@ FORMS += \
     barvolume/frmbarvolume.ui \
     mouse/frmmouse.ui \
     roundcircle/frmroundcircle.ui \
-    drawtextonPath/frmdrawtextonpath.ui
+    drawtextonPath/frmdrawtextonpath.ui \
+    roulettedraw/frmroulettedraw.ui
 
 win32:SOURCES += $$PWD/comtool/qextserialport/qextserialport_win.cpp
 unix:SOURCES += $$PWD/comtool/qextserialport/qextserialport_unix.cpp
