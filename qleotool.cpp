@@ -33,6 +33,9 @@
 #include "roundcircle/frmroundcircle.h"
 #include "drawtextonPath/frmdrawtextonpath.h"
 #include "roulettedraw/frmroulettedraw.h"
+#include "slidepuzzlewidget/frmslidepuzzlewidget.h"
+#include "imageviewwindow/frmimageviewwindow.h"
+#include "meterwidget/frmmeterwidget.h"
 
 QLeoTool::QLeoTool(QWidget *parent)
     : ShadowWidget(parent)
@@ -261,6 +264,21 @@ void QLeoTool::navigationListViewClick(QModelIndex index)
         case LeoTool_RouletteDraw:
         {
             wgt = new frmRouletteDraw(this);
+            break;
+        }
+        case LeoTool_PuzzleWidget:
+        {
+            wgt = new FrmSlidePuzzleWidget(this);
+            break;
+        }
+        case LeoTool_ImageViewWindow:
+        {
+            wgt = new frmImageViewWindow(this);
+            break;
+        }
+        case LeoTool_MeterWidget:
+        {
+            wgt = new frmMeterWidget(this);
             break;
         }
         default:

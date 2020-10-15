@@ -106,4 +106,10 @@
         <file>image/roulettedraw/back.png</file>
         <file>image/roulettedraw/pointer.png</file>
     </qresource>
+    <qresource prefix="/slidepuzzlewidget">
+        <file>image/slidepuzzlewidget/back1.png</file>
+        <file>image/slidepuzzlewidget/back2.png</file>
+        <file>image/slidepuzzlewidget/back3.png</file>
+        <file>image/slidepuzzlewidget/back4.png</file>
+    </qresource>
 </RCC>

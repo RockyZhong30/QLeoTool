@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmMeterWidget</class>
+ <widget class="QWidget" name="frmMeterWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>674</width>
+    <height>408</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="TimeMeterWidget" name="widget" native="true"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="SpeedMeterWidget" name="widget_2" native="true"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="PaintMeterWidget" name="widget_3" native="true"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="RadarMeterWidget" name="widget_4" native="true"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="horizontalSlider">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TimeMeterWidget</class>
+   <extends>QWidget</extends>
+   <header>meterwidget/timemeterwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SpeedMeterWidget</class>
+   <extends>QWidget</extends>
+   <header>meterwidget/speedmeterwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PaintMeterWidget</class>
+   <extends>QWidget</extends>
+   <header>meterwidget/paintmeterwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>RadarMeterWidget</class>
+   <extends>QWidget</extends>
+   <header>meterwidget/radarmeterwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "common/basestylewidget.h"
 #include "NavListView/navlistview.h"
+#include "scrolltext/scrolltext.h"
 
 class MainCenterWidget : public BaseStyleWidget
 {
@@ -26,6 +27,7 @@ public:
 public:
     QTabWidget          *m_centerWidget;
     NavListView         *m_navigationListView;
+    ScrollText          *m_scrollTextWidget;
 
 protected:
     void                paintEvent(QPaintEvent *e);

@@ -22,6 +22,9 @@ void MainCenterWidget::initParameter()
 void MainCenterWidget::initUI()
 {
     this->setGeometry(0, SCREEN_TOP_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT-SCREEN_TOP_HEIGHT);
+    QVBoxLayout *mainLayout = new QVBoxLayout();
+    mainLayout->setSpacing(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
     QHBoxLayout *centerHLayout = new QHBoxLayout();
     m_centerWidget = new QTabWidget(this);
     m_centerWidget->setTabPosition(QTabWidget::South);
@@ -45,7 +48,13 @@ void MainCenterWidget::initUI()
     centerHLayout->setContentsMargins(0, 0, 0, 0);
     m_navigationListView->hide();
 
-    this->setLayout(centerHLayout);
+    m_scrollTextWidget = new ScrollText(this);
+    mainLayout->addLayout(centerHLayout);
+    mainLayout->addWidget(m_scrollTextWidget);
+    mainLayout->setStretchFactor(centerHLayout, 15);
+    mainLayout->setStretchFactor(m_scrollTextWidget, 1);
+
+    this->setLayout(mainLayout);
 }
 
 void MainCenterWidget::initAnimation()
@@ -145,5 +154,6 @@ void MainCenterWidget::paintEvent(QPaintEvent *e)
     Q_UNUSED(e);
     QPainter painter(this);
     painter.drawPixmap(m_centerWidget->pos().x(), m_centerWidget->pos().y(), m_centerWidget->rect().width(), m_centerWidget->rect().height(), m_centerPix, 0, 0, m_centerPix.width(), m_centerPix.height());
+    painter.drawPixmap(m_scrollTextWidget->pos().x(), m_scrollTextWidget->pos().y(), m_scrollTextWidget->rect().width(), m_scrollTextWidget->rect().height(), m_centerPix, 0, 0, m_centerPix.width(), m_centerPix.height());
 }
 

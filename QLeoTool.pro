@@ -107,7 +107,16 @@ SOURCES += \
     drawtextonPath/drawtextonarcpath.cpp \
     drawtextonPath/frmdrawtextonpath.cpp \
     roulettedraw/roulettedraw.cpp \
-    roulettedraw/frmroulettedraw.cpp
+    roulettedraw/frmroulettedraw.cpp \
+    slidepuzzlewidget/frmslidepuzzlewidget.cpp \
+    slidepuzzlewidget/puzzlewidget.cpp \
+    imageviewwindow/frmimageviewwindow.cpp \
+    scrolltext/scrolltext.cpp \
+    meterwidget/frmmeterwidget.cpp \
+    meterwidget/timemeterwidget.cpp \
+    meterwidget/speedmeterwidget.cpp \
+    meterwidget/paintmeterwidget.cpp \
+    meterwidget/radarmeterwidget.cpp
 
 HEADERS += \
     NavListView/navlistview.h \
@@ -199,7 +208,16 @@ HEADERS += \
     drawtextonPath/drawtextonarcpath.h \
     drawtextonPath/frmdrawtextonpath.h \
     roulettedraw/roulettedraw.h \
-    roulettedraw/frmroulettedraw.h
+    roulettedraw/frmroulettedraw.h \
+    slidepuzzlewidget/frmslidepuzzlewidget.h \
+    slidepuzzlewidget/puzzlewidget.h \
+    imageviewwindow/frmimageviewwindow.h \
+    scrolltext/scrolltext.h \
+    meterwidget/frmmeterwidget.h \
+    meterwidget/timemeterwidget.h \
+    meterwidget/speedmeterwidget.h \
+    meterwidget/paintmeterwidget.h \
+    meterwidget/radarmeterwidget.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -252,7 +270,10 @@ FORMS += \
     mouse/frmmouse.ui \
     roundcircle/frmroundcircle.ui \
     drawtextonPath/frmdrawtextonpath.ui \
-    roulettedraw/frmroulettedraw.ui
+    roulettedraw/frmroulettedraw.ui \
+    slidepuzzlewidget/frmslidepuzzlewidget.ui \
+    imageviewwindow/frmimageviewwindow.ui \
+    meterwidget/frmmeterwidget.ui
 
 win32:SOURCES += $$PWD/comtool/qextserialport/qextserialport_win.cpp
 unix:SOURCES += $$PWD/comtool/qextserialport/qextserialport_unix.cpp

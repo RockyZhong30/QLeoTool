@@ -2,7 +2,7 @@
 <root>
 	<layout>
 		<Node label="主界面" info="Leo Tool" num="1"></Node>
-		<Node label="基础控件" collapse="0" info="22">
+		<Node label="基础控件" collapse="0" info="24">
 						<Node label="电池电量控件" num="2"></Node>
                         <Node label="通用按钮地图效果" num="3"></Node>
 						<Node label="硬盘容量控件" num="4"></Node>
@@ -25,18 +25,21 @@
 						<Node label="旋转圆" num="21"></Node>
 						<Node label="弧形文本控件" num="22"></Node>
 						<Node label="轮盘抽奖控件" num="23"></Node>
+						<Node label="滑块图片验证码" num="24"></Node>
+						<Node label="滚动字幕控件" num="25"></Node>
+						<Node label="仪表雷达控件" num="26"></Node>
 		</Node>
 		<Node label="调试工具" collapse="0" info="4">
-						<Node label="计算器" num="24"></Node>
-						<Node label="串口调试助手" num="25"></Node>
-						<Node label="网络调试助手" num="26"></Node>
-						<Node label="PNG图片警告去除工具" num="27"></Node>
+						<Node label="计算器" num="27"></Node>
+						<Node label="串口调试助手" num="28"></Node>
+						<Node label="网络调试助手" num="29"></Node>
+						<Node label="PNG图片警告去除工具" num="30"></Node>
 		</Node>
 		<Node label="QWT插件" collapse="0" info="1">
-						<Node label="qwt demo" num="28"></Node>
+						<Node label="qwt demo" num="31"></Node>
 		</Node>
 		<Node label="Game" collapse="0" info="1">
-						<Node label="2048" num="29"></Node>
+						<Node label="2048" num="32"></Node>
 		</Node>
 		<Node label="帮助文档"></Node>
 	</layout>
